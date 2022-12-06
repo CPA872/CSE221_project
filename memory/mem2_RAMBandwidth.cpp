@@ -34,7 +34,8 @@ float findMean(vector<float> &v)
     std::vector<double> diff(v.size());
     std::transform(v.begin(), v.end(), diff.begin(), std::bind2nd(std::minus<double>(), mean));
     cout << "Mean: ";
-    cout << mean << endl;
+    cout << mean;
+    cout << " GB/s" << endl;
     return mean;
 }
 
@@ -132,7 +133,7 @@ void measureRead()
             free(arr);
         }
 
-        cout << "readVec ";
+        cout << "Read Bandwidth ";
         float mean = findMean(readVec);
         meanReadVec.push_back(mean);
 
@@ -207,7 +208,7 @@ void measureWrite()
             free(arr);
         }
 
-        cout << "writeVec ";
+        cout << "Write Bandwidth ";
         float mean = findMean(writeVec);
         meanWriteVec.push_back(mean);
 

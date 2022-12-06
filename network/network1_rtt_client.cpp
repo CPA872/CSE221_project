@@ -4,9 +4,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <strings.h> // bzero()
+#include <strings.h>
 #include <sys/socket.h>
-#include <unistd.h> // read(), write(), close()
+#include <unistd.h> 
 #include <iostream>
 #include <chrono>
 #include <x86intrin.h>

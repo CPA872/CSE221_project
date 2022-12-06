@@ -1,0 +1,28 @@
+## CSE 221 Project
+
+To compile the files for each section, run the respective bash files (i.e. cpu_ops/ops.sh or file_system/fs.sh).
+
+To run the files, run the executables generated after compiling. The names of the executables are echoed to the terminal.
+
+### CPU ops
+- ops1_MeasurementOverhead.cpp performs experiments for Operations question 1. Here we measure the overhead of reading time and the overhead of using a loop to measure multiple iterations of an operation.
+- ops2_ProcedureCallOverhead.cpp performs experiments for Operations question 2. Here, we measure the overhead of procedure calls with different number of arguments.
+- ops345_SysCallTaskCreationContextS.cpp performs experiments for Operations questions 3, 4, and 5. Here, we measure the overhead to the system call 'whoami'. Task creation time measures the time is takes to start and run fork() and compares the results from starting and running a pthread. For question 5, it measures context switching processes using pipe() and compares it to the time it takes for threads to context switch.
+
+### Memory
+- mem1_RAMAccessTime.cpp performs experiments for Memory question 1. Here, we measure the access latency to arrays of different sizes. 
+- mem2_RAMBandwidth.cpp performs experiments for Memory question 2. Here, we measure the bandwidth of read and write to memory using loop-unrolling.
+  - The code for the other measurement of bandwidth using vectorization was deleted somehow :((
+- The code for Memory question 3 was unfortunately deleted somehow :((
+
+### Network
+#### Note that there is a separate README file under network/ with further details. 
+- network1_rtt_client.cpp and network1_rtt_server.cpp are code files for experiments for Network question 1. They define minimal client and server files used for measuring round trip time of a packet traveling from the client to the server and back.
+- network2_peak_bw_client.cpp and network2_peak_bw_client.cpp are code files for experiments for Network question 2. They define client and server files used for measuring peak bandwidth.
+- network3_setup_overhead.cpp and network3_teardown_overhead.cpp are code files for experiments for Network question 3. 
+    
+### File System
+- fs1_FileCache.cpp performs experiments for File System question 1. Here, we measure the avg time it takes to read a byte for files of various sizes.
+- fs2_Contention.cpp performs experiments for File System question 2. Here, we report times for both sequential and random access as a function of file size.
+- fs3_Contention.cpp performs experiments for File System question 3. Here, we report times for both sequential and random access as a function of file size for a remote file system.
+- fs4_Contention.cpp performs experiments for File System question 4. Here, we measure the avg time it takes to read a block (bypassing file cache) for a variable number of simultaenous processes.

@@ -72,6 +72,15 @@ void fileRandomReadTime(const char * filename, long filebyte)
         lseek(file, BLOCK_SIZE * randNum, SEEK_SET);
         read(file, buf, BLOCK_SIZE);
         float numTicks = rdtsc() - tick;
+        vec.push_back(convertCyclesToSeconds(numTicks));
+    }
+    free(buf);
+
+    close(file);
+    findMean(vec);
+}
+
+int main ()
 {
     vector<const char*> filenames = {"../example_files/0_125GB.txt", "../example_files/0_25GB.txt", 
                                      "../example_files/0_5GB.txt", "../example_files/1GB.txt",
@@ -79,7 +88,7 @@ void fileRandomReadTime(const char * filename, long filebyte)
     vector<long> filebytes = {134217728, 268435456, 536870912, 1073741824, 2147483648, 8589934592 };
     for (int i = 0; i < filenames.size(); i++)
     {
-        cout << "sequential read time for " << filenames[i] << endl;
+        cout << "sequential read time for " << filenames[i] << " in seconds" << endl;
         fileSequentialReadTime(filenames[i]);
     }
 
@@ -87,7 +96,7 @@ void fileRandomReadTime(const char * filename, long filebyte)
 
     for (int i = 0; i < filenames.size(); i++)
     {
-        cout << "random read time for " << filenames[i] << endl;
+        cout << "random read time for " << filenames[i] << " in seconds" << endl;
         fileRandomReadTime(filenames[i], filebytes[i]);
     }
 }

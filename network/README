@@ -1,0 +1,13 @@
+This file provides instructions on how to run network measurements, as they are not as intuitive as other sections. 
+
+For question 1, round trip time, there are rtt_server and rtt_client executables after compilation. For loop back
+connections, have rtt_server run in a terminal and run rtt_client in another terminal. Make sure the inet_addr in 
+line 64 of rtt_client is 127.0.0.1. Then, the rtt_client should output the measured RTT. For remote connection, 
+have rtt_server run on the remote computer. Run rtt_client on the test machine and make sure the inet_addr matches 
+that of the remote server. The same procedure applies thereafter.
+
+For question 2, the procedure is roughly the same. The peak_bw_server should be run on local machine or remote 
+machine to measure loopback and remote peak bandwidth. 
+
+For question 3, you should use a rtt_server from question 1 as server. Then, depending on where the server is run, 
+running setup_overhead and teardown_overhead on the test machines give respective measurements. 

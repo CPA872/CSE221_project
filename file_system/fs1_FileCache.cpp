@@ -83,7 +83,7 @@ int main () {
         cout << filenames[i];
         cout << ": ";
 
-        cout << getAvgBytesPerSecond(filenames[i], filebytes[i]) << endl;
+        cout << getAvgBytesPerSecond(filenames[i], filebytes[i]) << " secs/byte" << endl;
     }
 
     return(0);

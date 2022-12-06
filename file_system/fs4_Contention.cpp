@@ -125,6 +125,6 @@ int main(int argc, char *argv[])
 
         cout << num_processes << " ";
         cout << "Child Processes: "; 
-        cout << mean << endl;
+        cout << mean << " secs/block" << endl;
     }
 }

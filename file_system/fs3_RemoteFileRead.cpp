@@ -88,7 +88,7 @@ int main(int argc, char *argv[])
     vector<long> filebytes = {134217728, 268435456, 536870912, 1073741824, 2147483648, 8589934592 };
     for (int i = 0; i < filenames.size(); i++)
     {
-        cout << "remote sequential read time for " << filenames[i] << endl;
+        cout << "remote sequential read time for " << filenames[i] << " in seconds" << endl;
         fileSequentialReadTime(filenames[i]);
     }
 
@@ -96,7 +96,7 @@ int main(int argc, char *argv[])
 
     for (int i = 0; i < filenames.size(); i++)
     {
-        cout << "remote random read time for " << filenames[i] << endl;
+        cout << "remote random read time for " << filenames[i] << " in seconds" << endl;
         fileRandomReadTime(filenames[i], filebytes[i]);
     }
 }

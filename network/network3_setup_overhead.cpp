@@ -54,8 +54,8 @@ int main()
  
     // assign IP, PORT
     serv_addr.sin_family = AF_INET;
-    // serv_addr.sin_addr.s_addr = inet_addr("127.0.0.1");  // loopback 
-    serv_addr.sin_addr.s_addr = inet_addr("132.239.17.136");  // another computer in CSE
+     serv_addr.sin_addr.s_addr = inet_addr("127.0.0.1");  // loopback 
+    //serv_addr.sin_addr.s_addr = inet_addr("132.239.17.136");  // another computer in CSE
     serv_addr.sin_port = htons(8080);
  
     // connect the client socket to server socket
