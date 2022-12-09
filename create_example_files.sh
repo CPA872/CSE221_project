@@ -1,5 +1,5 @@
-mkdir examples_files
-cd examples_files
+mkdir example_files
+cd example_files
 fallocate -l 0.125G 0_125GB.txt
 fallocate -l 0.25G 0_25GB.txt
 fallocate -l 0.5G 0_5GB.txt

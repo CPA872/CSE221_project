@@ -16,8 +16,9 @@ A new directory called example_files/ will appear.
 
 ### Memory
 - mem1_RAMAccessTime.cpp performs experiments for Memory question 1. Here, we measure the access latency to arrays of different sizes. 
-- mem2_RAMBandwidth.cpp performs experiments for Memory question 2. Here, we measure the bandwidth of read and write to memory using loop-unrolling.
-  - The code for the other measurement of bandwidth using vectorization was deleted somehow :((
+- mem2_RAMBandwidth.cpp performs experiments for Memory question 2. Here, we measure the bandwidth of reads and writes to memory using loop-unrolling.
+- mem2_RAMBandwidthP2.cpp is another experiment for Memory question 2. Here, we measure the bandwidth of reads and writes to memory using vectorization.
+  - This file will need to be compiled twice with different flags to test AVX2 and SSE2 separately. memory/mem.sh contains information about the flags.
 - mem3_PageFaultTime.cpp performs experiments for Memory question 3. Here, we measure the time on page faults, more specifically the time to read virtually mapped (but not yet read into memory) pages.
 
 ### Network
